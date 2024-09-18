@@ -16,7 +16,7 @@ public class ALFEREZIT2E {
      */
     public static void main(String[] args) {
         Execution exe = new Execution();
-        exe.getOrders();
+        exe.orderInput();
     }
     
 }

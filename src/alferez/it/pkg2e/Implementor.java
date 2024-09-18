@@ -1,16 +1,18 @@
 
 package alferez.it.pkg2e;
 
+import java.time.LocalDate;
+
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 
 public class Implementor {
     int id;
     String customerName;
-    int orderDate;
+    LocalDate orderDate;
     double orderAmount;
     String status; 
     
-    public void addCustomerOrder(int id, String name, int orderDate, double orderAmount, String status){
+    public void addCustomerOrder(int id, String name, LocalDate orderDate, double orderAmount, String status){
         this.id = id;
         this.customerName = name;
         this.orderDate  = orderDate;
@@ -20,7 +22,7 @@ public class Implementor {
     } 
     
     public void viewCustomerOrder(){
-        System.out.printf("%-8d %-12s %-12s %-10f %-8d", "ID", "Name", "Date", "Amount", "status");   
+        System.out.printf("%-10d %-20s %-15s S%-15.2f %-10s\n", id, customerName, orderDate.toString(), orderAmount, status);
     }
     
     
